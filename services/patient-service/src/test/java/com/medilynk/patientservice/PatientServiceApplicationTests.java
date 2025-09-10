@@ -1,10 +1,10 @@
-package com.medilynk.patinetservice;
+package com.medilynk.patientservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PatinetServiceApplicationTests {
+class PatientServiceApplicationTests {
 
     @Test
     void contextLoads() {

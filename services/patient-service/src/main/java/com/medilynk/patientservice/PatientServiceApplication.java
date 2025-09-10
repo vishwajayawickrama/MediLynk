@@ -1,13 +1,13 @@
-package com.medilynk.patinetservice;
+package com.medilynk.patientservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PatinetServiceApplication {
+public class PatientServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PatinetServiceApplication.class, args);
+        SpringApplication.run(PatientServiceApplication.class, args);
     }
 
 }
