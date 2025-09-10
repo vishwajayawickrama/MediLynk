@@ -115,6 +115,72 @@ class PatientServiceApplicationTests {
 
         logger.info("Get patient by ID  test passed and response validated.");
     }
+
+    @Test
+    void shouldUpdatePatient() {
+        // First create a patient to get its ID
+        String patientId = createTestPatient();
+        logger.info("Created test patient with ID: {}", patientId);
+
+        String updateRequestBody = """
+            {
+                "firstName": "UpdatedName",
+                "lastName": "UpdatedLastName",
+                "email": "UpdatedEmail@test.com",
+                "phone": "1112223333",
+                "dob": "1995-12-12",
+                "address": "Updated Address",
+                "age": 28,
+                "status": "INACTIVE"
+            }
+            """;
+
+        logger.info("Sending PUT request to /api/patients/{} with body: {}", patientId, updateRequestBody);
+        RestAssured.given()
+                .queryParam("id", patientId)
+                .contentType(ContentType.JSON)
+                .body(updateRequestBody)
+                .when()
+                .put("/api/patient")
+                .then()
+                .statusCode(200)
+                .body("id", equalTo(patientId))
+                .body("firstName", equalTo("UpdatedName"))
+                .body("lastName", equalTo("UpdatedLastName"))
+                .body("email", equalTo("UpdatedEmail@test.com"))
+                .body("dob", equalTo("1995-12-12"))
+                .body("phone", equalTo("1112223333"))
+                .body("address", equalTo("Updated Address"))
+                .body("age", equalTo(28))
+                .body("status", equalTo("INACTIVE"));
+
+        logger.info("Update patient test passed and response validated.");
+    }
+
+    @Test
+    void shouldDeletePatient() {
+        // First create a patient to get its ID
+        String patientId = createTestPatient();
+        logger.info("Created test patient with ID: {}", patientId);
+
+        logger.info("Sending DELETE request to /api/patients/{}", patientId);
+        RestAssured.given()
+                .queryParam("id", patientId)
+                .when()
+                .delete("/api/patient")
+                .then()
+                .statusCode(200);
+
+        // Verify deletion by attempting to fetch the deleted patient
+        RestAssured.given()
+                .queryParam("id", patientId)
+                .when()
+                .get("/api/patient")
+                .then()
+                .statusCode(500); // Assuming the service returns 500 for not found
+
+        logger.info("Delete patient test passed and deletion verified.");
+    }
     // Helper method to create a test patient and return its ID
     private String createTestPatient() {
         String requestBody = """
