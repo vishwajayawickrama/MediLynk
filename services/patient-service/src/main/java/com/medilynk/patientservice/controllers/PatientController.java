@@ -1,29 +1,36 @@
 package com.medilynk.patientservice.controllers;
 
-import lombok.RequiredArgsConstructor;
 import com.medilynk.patientservice.dto.PatientRequest;
 import com.medilynk.patientservice.dto.PatientResponse;
-import com.medilynk.patientservice.models.Patient;
 import com.medilynk.patientservice.services.PatientService;
-import org.springframework.http.HttpStatus;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.http.*;
 
 @RestController
-@RequestMapping("api/patients")
+@RequestMapping("api/patient")
 @RequiredArgsConstructor
 public class PatientController {
-     private final PatientService patientService;
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public PatientResponse CreatePatient(@RequestBody PatientRequest patientRequest) {
-        return patientService.createPatient(patientRequest);
-    }
+        private final PatientService patientService;
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
-    public List<PatientResponse> getPatient() {
-        return patientService.getAllPatiens();
-    }
+        @GetMapping
+        @ResponseStatus(HttpStatus.OK)
+        public PatientResponse getPatient(@RequestParam String id) {
+                return patientService.getPatientById(id);
+        }
+
+        @PutMapping
+        @ResponseStatus(HttpStatus.OK)
+        public PatientResponse updatePatient(@RequestParam String id,@RequestBody PatientRequest patientRequest) {
+            return patientService.updatePatient(id,patientRequest);
+        }
+
+        @DeleteMapping
+        @ResponseStatus(HttpStatus.OK)
+        public void deletePatient(@RequestParam String id) {
+            patientService.deletePatient(id);
+        }
+
+
+
 }

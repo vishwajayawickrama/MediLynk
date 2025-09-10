@@ -23,55 +23,121 @@ class PatientServiceApplicationTests {
     @LocalServerPort
     private int port;
 
-    @BeforeEach // Setup RestAssured before each test
-    void setUp() {
-        RestAssured.baseURI = "http://localhost";
-        RestAssured.port = port;
-        logger.info("RestAssured configured with baseURI: {} and port: {}", RestAssured.baseURI, port);
-    }
-
-    static { // Start MongoDB container before all tests. It is static to ensure it runs once for the class.
+    static {
+        // Start MongoDB container before all tests. It is static to ensure it runs once for the class.
         mongoDBContainer.start();
-        logger.info("MongoDB Testcontainer started at: {}", mongoDBContainer.getReplicaSetUrl());
+        // Note: Logger calls in static block removed as they may not work properly
     }
 
     @DynamicPropertySource
     static void setProperties(DynamicPropertyRegistry registry) {
         registry.add("spring.data.mongodb.uri", mongoDBContainer::getReplicaSetUrl);
-        logger.info("spring.data.mongodb.uri set to: {}", mongoDBContainer.getReplicaSetUrl());
+        // Logger call moved to a method that runs after Spring context is loaded
+    }
+
+    @BeforeEach
+    void setUp() {
+        RestAssured.baseURI = "http://localhost";
+        RestAssured.port = port;
+        logger.info("RestAssured configured with baseURI: {} and port: {}", RestAssured.baseURI, port);
+        logger.info("MongoDB Testcontainer running at: {}", mongoDBContainer.getReplicaSetUrl());
     }
 
     @Test
     void shouldCreatePatient() {
-        String requestBody =
-                        """
-                            {
-                                "firstName": "vishwa",
-                                "lastName": "Jayawickrama",
-                                "email": "vishwa@gmail.com",
-                                "phone": "0123456",
-                                "address": "colombo",
-                                "age": 23,
-                                "status": "ACTIVE"
-                            }
-                        """;
+        String requestBody = """
+            {
+                "firstName": "vishwa",
+                "lastName": "Jayawickrama",
+                "email": "vishwa@gmail.com",
+                "phone": "0123456",
+                "dob": "2000-01-01",
+                "address": "colombo",
+                "age": 23,
+                "status": "ACTIVE"
+            }
+            """;
         logger.info("Sending POST request to /api/patients with body: {}", requestBody);
 
         RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(requestBody)
                 .when()
-                .post("api/patients")
+                .post("/api/patients") // Added leading slash
                 .then()
                 .statusCode(201)
                 .body("id", notNullValue())
                 .body("firstName", equalTo("vishwa"))
                 .body("lastName", equalTo("Jayawickrama"))
                 .body("email", equalTo("vishwa@gmail.com"))
+                .body("dob", equalTo("2000-01-01"))
                 .body("phone", equalTo("0123456"))
                 .body("address", equalTo("colombo"))
                 .body("age", equalTo(23))
                 .body("status", equalTo("ACTIVE"));
         logger.info("Patient creation test passed and response validated.");
+    }
+
+    @Test
+    void shouldGetAllPatients() {
+        // First create a patient to ensure the database is not empty
+        createTestPatient();
+
+        logger.info("Sending GET request to /api/patients");
+
+        RestAssured.given()
+                .when()
+                .get("/api/patients") // Added leading slash
+                .then()
+                .statusCode(200)
+                .body("$", not(empty()))
+                .body("size()", greaterThan(0))
+                .body("[0]", hasKey("id"))
+                .body("[0]", hasKey("firstName"));
+        logger.info("Get all patients test passed and response validated.");
+    }
+
+    @Test
+    void shouldGetPatientById() {
+        // First create a patient to get its ID
+        String patientId = createTestPatient();
+        logger.info("Created test patient with ID: {}", patientId);
+
+        logger.info("Sending GET request to /api/patients/{}", patientId);
+
+        RestAssured.given()
+                .queryParam("id", patientId)
+                .when()
+                .get("/api/patient") // Added leading slash
+                .then()
+                .statusCode(200)
+                .body("id", equalTo(patientId));
+
+        logger.info("Get patient by ID  test passed and response validated.");
+    }
+    // Helper method to create a test patient and return its ID
+    private String createTestPatient() {
+        String requestBody = """
+            {
+                "firstName": "Test",
+                "lastName": "Patient",
+                "email": "test@example.com",
+                "phone": "0987654321",
+                "dob": "1990-05-15",
+                "address": "Test Address",
+                "age": 33,
+                "status": "ACTIVE"
+            }
+            """;
+
+        return RestAssured.given()
+                .contentType(ContentType.JSON)
+                .body(requestBody)
+                .when()
+                .post("/api/patients")
+                .then()
+                .statusCode(201)
+                .extract()
+                .path("id");
     }
 }

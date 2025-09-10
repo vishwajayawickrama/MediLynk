@@ -6,6 +6,7 @@ public record PatientRequest(
                                 String firstName,
                                 String lastName,
                                 String email,
+                                String dob,
                                 String phone,
                                 String address,
                                 int age,
