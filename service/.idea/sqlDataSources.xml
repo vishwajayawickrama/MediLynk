@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="88afada1-e256-4235-b224-a140295e34cd" name="patient-service-db Mapping">
+      <data-sources db="4388eedd-6ab1-4fff-b138-9793debfd883" ddl="9227dc82-49e4-4765-a965-127f9d57628c" />
+    </mapping>
+  </component>
+</project>
