@@ -1,10 +1,12 @@
 package com.medilynk.patientservice.service;
 
 
+import billing.BillingServiceGrpc;
 import com.medilynk.patientservice.dto.PatientRequestDTO;
 import com.medilynk.patientservice.dto.PatientResponseDTO;
 import com.medilynk.patientservice.exception.EmailAlreadyExistsException;
 import com.medilynk.patientservice.exception.PatientNotFoundException;
+import com.medilynk.patientservice.grpc.BillingServiceGrpcClient;
 import com.medilynk.patientservice.mappers.PatientMapper;
 import com.medilynk.patientservice.model.Patient;
 import com.medilynk.patientservice.repository.PatientRepository;
@@ -18,9 +20,11 @@ import java.util.UUID;
 @Service // Marks this class as a Spring service component and a candidate for dependency injection so that it can be injected into other components.
 public class PatientService {
     private final PatientRepository patientRepository;
+    private final BillingServiceGrpcClient billingServiceGrpcClient;
 
-    public PatientService(PatientRepository patientRepository) {
+    public PatientService(PatientRepository patientRepository, BillingServiceGrpcClient billingServiceGrpcClient) {
         this.patientRepository = patientRepository;
+        this.billingServiceGrpcClient = billingServiceGrpcClient;
     }
 
 
@@ -33,8 +37,12 @@ public class PatientService {
         if (patientRepository.existsByEmail(patientRequestDTO.getEmail())) {
             throw new EmailAlreadyExistsException("Email already exists with this email: " + patientRequestDTO.getEmail());
         }
-        Patient patient = patientRepository.save(PatientMapper.toModel(patientRequestDTO));
-        return PatientMapper.toDTO(patient);
+        Patient newPatient = patientRepository.save(PatientMapper.toModel(patientRequestDTO));
+        billingServiceGrpcClient.createBillingAccount(
+                                                        newPatient.getId().toString(),
+                                                        newPatient.getName(),
+                                                        newPatient.getAddress());
+        return PatientMapper.toDTO(newPatient);
     }
 
     public PatientResponseDTO updatePatient(UUID id, PatientRequestDTO patientRequestDTO) {
