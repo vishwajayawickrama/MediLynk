@@ -21,8 +21,8 @@ public class BillingServiceGrpcClient {
      * @param serverPort Port of the Billing Service (from properties or default)
      */
     public BillingServiceGrpcClient(
-            @Value("${billing.service.address:localhost}") String serverAddress,
-            @Value("${billing.service.port:9001}") int serverPort) {
+            @Value("${billing.service.address:localhost}") String serverAddress, // Default to localhost if not set
+            @Value("${billing.service.port:9001}") int serverPort) { // Default to 9001 if not set
         // Log the connection details for debugging
         log.info("Connecting to  Billing Service GRPC service at {}:{}", serverAddress, serverPort);
 

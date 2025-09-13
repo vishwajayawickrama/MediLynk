@@ -7,6 +7,7 @@ import com.medilynk.patientservice.dto.PatientResponseDTO;
 import com.medilynk.patientservice.exception.EmailAlreadyExistsException;
 import com.medilynk.patientservice.exception.PatientNotFoundException;
 import com.medilynk.patientservice.grpc.BillingServiceGrpcClient;
+import com.medilynk.patientservice.kafka.KafkaProducer;
 import com.medilynk.patientservice.mappers.PatientMapper;
 import com.medilynk.patientservice.model.Patient;
 import com.medilynk.patientservice.repository.PatientRepository;
@@ -21,10 +22,15 @@ import java.util.UUID;
 public class PatientService {
     private final PatientRepository patientRepository;
     private final BillingServiceGrpcClient billingServiceGrpcClient;
+    private final KafkaProducer kafkaProducer;
 
-    public PatientService(PatientRepository patientRepository, BillingServiceGrpcClient billingServiceGrpcClient) {
+    public PatientService(
+            PatientRepository patientRepository,
+            BillingServiceGrpcClient billingServiceGrpcClient,
+            KafkaProducer kafkaProducer) {
         this.patientRepository = patientRepository;
         this.billingServiceGrpcClient = billingServiceGrpcClient;
+        this.kafkaProducer = kafkaProducer;
     }
 
 
@@ -42,6 +48,8 @@ public class PatientService {
                                                         newPatient.getId().toString(),
                                                         newPatient.getName(),
                                                         newPatient.getAddress());
+
+        kafkaProducer.sendEvent(newPatient);
         return PatientMapper.toDTO(newPatient);
     }
 
