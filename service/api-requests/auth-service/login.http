@@ -1,5 +1,5 @@
 ### GET request to example server
-POST http://localhost:4004/auth/login
+POST http://lb-fe83e1ce.elb.localhost.localstack.cloud:4003/auth/login
 content-type: application/json
 
 {
