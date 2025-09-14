@@ -1,0 +1,8 @@
+# Integration Tests .gitignore
+/target/
+/logs/
+*.log
+*.class
+*.jar
+*.iml
+.idea/

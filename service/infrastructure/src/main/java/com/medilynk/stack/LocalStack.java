@@ -382,8 +382,8 @@ public class LocalStack extends Stack {
                                 "SPRING_PROFILES_ACTIVE", "prod", // Production Spring profile
                                 "AUTH_SERVICE_URL", "http://host.docker.internal:4005" // Auth service endpoint
                         ))
-                        // API Gateway listens on port 4003
-                        .portMappings(List.of(4003).stream()
+                        // API Gateway listens on port 4004
+                        .portMappings(List.of(4004).stream()
                                 .map(port -> PortMapping.builder()
                                         .containerPort(port)
                                         .hostPort(port)
@@ -419,13 +419,13 @@ public class LocalStack extends Stack {
     /**
      * Main method - entry point for CDK application.
      * Synthesizes the CloudFormation template and deploys the infrastructure.
-     *
+
      * CDK workflow:
      * 1. Create CDK App instance
      * 2. Create LocalStack with configuration
      * 3. Synthesize to CloudFormation template
      * 4. Deploy using AWS CLI or CDK deploy command
-     *
+
      * BootstraplessSynthesizer: Allows deployment without CDK bootstrap
      * (useful for local development environments)
      */

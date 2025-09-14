@@ -1,4 +1,4 @@
-# Patient Service .gitignore
+# Auth Service .gitignore
 /target/
 /logs/
 *.log

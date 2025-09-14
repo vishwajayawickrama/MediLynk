@@ -275,16 +275,16 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1978)",
-              "Annotations.addWarningV2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
-              "new BaseService (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8444)",
-              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
-              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
-              "Kernel._Kernel_create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:548:25)",
-              "Kernel.create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:218:93)",
-              "KernelHost.processRequest (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15479:36)",
-              "KernelHost.run (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15439:22)",
-              "Immediate._onImmediate (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15440:45)",
+              "Annotations.addMessage (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1978)",
+              "Annotations.addWarningV2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
+              "new BaseService (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8444)",
+              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
+              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
+              "Kernel._Kernel_create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15479:36)",
+              "KernelHost.run (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15439:22)",
+              "Immediate._onImmediate (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15440:45)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           }
@@ -336,16 +336,16 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1978)",
-              "Annotations.addWarningV2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
-              "new BaseService (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8444)",
-              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
-              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
-              "Kernel._Kernel_create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:548:25)",
-              "Kernel.create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:218:93)",
-              "KernelHost.processRequest (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15479:36)",
-              "KernelHost.run (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15439:22)",
-              "Immediate._onImmediate (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15440:45)",
+              "Annotations.addMessage (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1978)",
+              "Annotations.addWarningV2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
+              "new BaseService (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8444)",
+              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
+              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
+              "Kernel._Kernel_create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15479:36)",
+              "KernelHost.run (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15439:22)",
+              "Immediate._onImmediate (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15440:45)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           }
@@ -397,16 +397,16 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1978)",
-              "Annotations.addWarningV2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
-              "new BaseService (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8444)",
-              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
-              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
-              "Kernel._Kernel_create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:548:25)",
-              "Kernel.create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:218:93)",
-              "KernelHost.processRequest (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15479:36)",
-              "KernelHost.run (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15439:22)",
-              "Immediate._onImmediate (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15440:45)",
+              "Annotations.addMessage (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1978)",
+              "Annotations.addWarningV2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
+              "new BaseService (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8444)",
+              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
+              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
+              "Kernel._Kernel_create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15479:36)",
+              "KernelHost.run (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15439:22)",
+              "Immediate._onImmediate (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15440:45)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           }
@@ -458,16 +458,16 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1978)",
-              "Annotations.addWarningV2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
-              "new BaseService (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8444)",
-              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
-              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
-              "Kernel._Kernel_create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:548:25)",
-              "Kernel.create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:218:93)",
-              "KernelHost.processRequest (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15479:36)",
-              "KernelHost.run (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15439:22)",
-              "Immediate._onImmediate (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15440:45)",
+              "Annotations.addMessage (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1978)",
+              "Annotations.addWarningV2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
+              "new BaseService (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8444)",
+              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
+              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
+              "Kernel._Kernel_create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15479:36)",
+              "KernelHost.run (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15439:22)",
+              "Immediate._onImmediate (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15440:45)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           }
@@ -526,10 +526,10 @@
             "data": "ApiGatewayServiceLBSecurityGroup0E508841"
           }
         ],
-        "/LocalStack/ApiGatewayService/LB/SecurityGroup/to LocalStackApiGatewayServiceSecurityGroupA6856A2F:4003": [
+        "/LocalStack/ApiGatewayService/LB/SecurityGroup/to LocalStackApiGatewayServiceSecurityGroupA6856A2F:4004": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "ApiGatewayServiceLBSecurityGrouptoLocalStackApiGatewayServiceSecurityGroupA6856A2F400365798E03"
+            "data": "ApiGatewayServiceLBSecurityGrouptoLocalStackApiGatewayServiceSecurityGroupA6856A2F40042A2C5523"
           }
         ],
         "/LocalStack/ApiGatewayService/LB/PublicListener/Resource": [
@@ -561,18 +561,18 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1978)",
-              "Annotations.addWarningV2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
-              "new BaseService (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8444)",
-              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
-              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
-              "new ApplicationLoadBalancedFargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:4035)",
-              "new ApplicationLoadBalancedFargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-THPSoh/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
-              "Kernel._Kernel_create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:548:25)",
-              "Kernel.create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:218:93)",
-              "KernelHost.processRequest (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15479:36)",
-              "KernelHost.run (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15439:22)",
-              "Immediate._onImmediate (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime4147813614338555059/lib/program.js:15440:45)",
+              "Annotations.addMessage (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1978)",
+              "Annotations.addWarningV2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/annotations.js:1:896)",
+              "new BaseService (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8444)",
+              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3888)",
+              "new FargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
+              "new ApplicationLoadBalancedFargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:4035)",
+              "new ApplicationLoadBalancedFargateService2 (/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-kernel-b5m5H9/node_modules/aws-cdk-lib/core/lib/prop-injectable.js:1:488)",
+              "Kernel._Kernel_create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15479:36)",
+              "KernelHost.run (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15439:22)",
+              "Immediate._onImmediate (/private/var/folders/qs/gz5mqzl57l7__qhg_fn_lc1w0000gn/T/jsii-java-runtime3949724863686041942/lib/program.js:15440:45)",
               "process.processImmediate (node:internal/timers:491:21)"
             ]
           }
@@ -589,10 +589,10 @@
             "data": "ApiGatewayServiceSecurityGroup867C9DB1"
           }
         ],
-        "/LocalStack/ApiGatewayService/Service/SecurityGroup/from LocalStackApiGatewayServiceLBSecurityGroupA8FB7638:4003": [
+        "/LocalStack/ApiGatewayService/Service/SecurityGroup/from LocalStackApiGatewayServiceLBSecurityGroupA8FB7638:4004": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "ApiGatewayServiceSecurityGroupfromLocalStackApiGatewayServiceLBSecurityGroupA8FB76384003965AB52B"
+            "data": "ApiGatewayServiceSecurityGroupfromLocalStackApiGatewayServiceLBSecurityGroupA8FB763840041EC488F1"
           }
         ]
       },

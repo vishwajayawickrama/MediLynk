@@ -1636,12 +1636,12 @@
      {
       "Environment": [
        {
-        "Name": "SPRING_PROFILES_ACTIVE",
-        "Value": "prod"
-       },
-       {
         "Name": "AUTH_SERVICE_URL",
         "Value": "http://host.docker.internal:4005"
+       },
+       {
+        "Name": "SPRING_PROFILES_ACTIVE",
+        "Value": "prod"
        }
       ],
       "Essential": true,
@@ -1661,8 +1661,8 @@
       "Name": "ApiGatewayContainer",
       "PortMappings": [
        {
-        "ContainerPort": 4003,
-        "HostPort": 4003,
+        "ContainerPort": 4004,
+        "HostPort": 4004,
         "Protocol": "tcp"
        }
       ]
@@ -1797,7 +1797,7 @@
     }
    }
   },
-  "ApiGatewayServiceLBSecurityGrouptoLocalStackApiGatewayServiceSecurityGroupA6856A2F400365798E03": {
+  "ApiGatewayServiceLBSecurityGrouptoLocalStackApiGatewayServiceSecurityGroupA6856A2F40042A2C5523": {
    "Type": "AWS::EC2::SecurityGroupEgress",
    "Properties": {
     "Description": "Load balancer to target",
@@ -1807,7 +1807,7 @@
       "GroupId"
      ]
     },
-    "FromPort": 4003,
+    "FromPort": 4004,
     "GroupId": {
      "Fn::GetAtt": [
       "ApiGatewayServiceLBSecurityGroup0E508841",
@@ -1815,7 +1815,7 @@
      ]
     },
     "IpProtocol": "tcp",
-    "ToPort": 4003
+    "ToPort": 4004
    }
   },
   "ApiGatewayServiceLBPublicListenerA86B9BC4": {
@@ -1875,7 +1875,7 @@
     "LoadBalancers": [
      {
       "ContainerName": "ApiGatewayContainer",
-      "ContainerPort": 4003,
+      "ContainerPort": 4004,
       "TargetGroupArn": {
        "Ref": "ApiGatewayServiceLBPublicListenerECSGroup0BFE5495"
       }
@@ -1932,11 +1932,11 @@
     "ApiGatewayTaskDefinitionTaskRole78FC06E2"
    ]
   },
-  "ApiGatewayServiceSecurityGroupfromLocalStackApiGatewayServiceLBSecurityGroupA8FB76384003965AB52B": {
+  "ApiGatewayServiceSecurityGroupfromLocalStackApiGatewayServiceLBSecurityGroupA8FB763840041EC488F1": {
    "Type": "AWS::EC2::SecurityGroupIngress",
    "Properties": {
     "Description": "Load balancer to target",
-    "FromPort": 4003,
+    "FromPort": 4004,
     "GroupId": {
      "Fn::GetAtt": [
       "ApiGatewayServiceSecurityGroup867C9DB1",
@@ -1950,7 +1950,7 @@
       "GroupId"
      ]
     },
-    "ToPort": 4003
+    "ToPort": 4004
    },
    "DependsOn": [
     "ApiGatewayTaskDefinitionTaskRole78FC06E2"

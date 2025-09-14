@@ -1,3 +1,28 @@
+# Global .gitignore for MediLynk
+.DS_Store
+*.iml
+.idea/
+*.log
+*.class
+*.jar
+*.war
+*.ear
+*.db
+*.sqlite
+*.h2.db
+.env
+node_modules/
+.env*
+# Maven
+/logs/
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+# OS
+Thumbs.db
+# VSCode
+.vscode/
+# LocalStack
+cdk.out/
 target/
 pom.xml.tag
 pom.xml.releaseBackup

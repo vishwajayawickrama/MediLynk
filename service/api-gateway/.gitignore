@@ -1,4 +1,4 @@
-# Patient Service .gitignore
+# API Gateway .gitignore
 /target/
 /logs/
 *.log

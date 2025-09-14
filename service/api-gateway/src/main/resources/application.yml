@@ -1,0 +1,39 @@
+server:
+  port: 4004
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        ## PATIENT SERVICE (JWT protected)
+        - id: patient-service-route
+          uri: http://patient-service:4000
+          predicates:
+            - Path=/api/patients/**
+          filters:
+            - name: JwtValidation
+            - StripPrefix=1
+
+        ## PATIENT SERVICE API DOCS (JWT protected)
+        - id: api-docs-patient-routes
+          uri: http://patient-service:4000
+          predicates:
+            - Path=/api-docs/patients
+          filters:
+            - name: JwtValidation
+            - RewritePath=/api-docs/patients, /v3/api-docs
+
+        ## AUTH SERVICE (public)
+        - id: auth-service-route
+          uri: http://auth-service:4005
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+
+        - id: api-docs-auth-routes
+          uri: http://auth-service:4005
+          predicates:
+            - Path=/api-docs/auth
+          filters:
+            - RewritePath=/api-docs/auth,/v3/api-docs

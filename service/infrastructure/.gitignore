@@ -1,0 +1,9 @@
+# Infrastructure .gitignore
+/target/
+/logs/
+*.log
+*.class
+*.jar
+*.iml
+.idea/
+cdk.out/
