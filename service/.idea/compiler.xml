@@ -12,6 +12,7 @@
         <module name="patient-service" />
         <module name="auth-service" />
         <module name="integration-tests" />
+        <module name="infrastructure" />
       </profile>
       <profile name="Annotation profile for billing-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
