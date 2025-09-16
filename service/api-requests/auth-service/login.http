@@ -1,5 +1,5 @@
 ### GET request to example server
-POST http://localhost:4004/auth/login
+POST http://localhost:4005/login
 content-type: application/json
 
 {
